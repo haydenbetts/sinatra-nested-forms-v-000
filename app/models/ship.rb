@@ -9,4 +9,8 @@ class Ship
     self.booty = attributes ["booty"]
   end
 
+  def self.all
+    @@all
+  end
+
 end

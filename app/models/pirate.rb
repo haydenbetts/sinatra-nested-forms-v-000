@@ -14,7 +14,7 @@ class Pirate
     params.each do |key, value|
       ATTRS_strings = ATTRS.collect {|attr| attr.to_s}
 
-      self.send("#{key}=", value) if ATTRS.include(key)
+      self.send("#{key}=", value) if ATTRS_strings.include(key)
     end
     # name = params["name"]
     # weight = params["weight"]

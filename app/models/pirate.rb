@@ -1,5 +1,5 @@
 class Pirate
-  ATTRS = [:id, :title, :body]
+  ATTRS = [:name, :height, :weight]
   attr_accessor(*ATTRS)
 
   @@all

@@ -11,7 +11,7 @@ class Pirate
   def initialize(params)
     # initialize pirates using only the
     params.each do |key, value|
-      if
+      if ATTRS.include(key)
       self.send("#{key}=", value)
     end
     # name = params["name"]

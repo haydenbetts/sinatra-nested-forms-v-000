@@ -1,5 +1,6 @@
 class Pirate
-  attr_accessor :name, :weight, :height
+  ATTRS = [:id, :title, :body]
+  attr_accessor(*ATTRS)
 
   @@all
 
@@ -9,7 +10,8 @@ class Pirate
 
   def initialize(params)
     # initialize pirates using only the
-    params["pirate"].each do |key, value|
+    params.each do |key, value|
+      if
       self.send("#{key}=", value)
     end
     # name = params["name"]

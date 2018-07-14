@@ -10,10 +10,9 @@ class Pirate
 
   def initialize(params)
     # select the relevant params
-    pirate_params = # i think the matching isn't working...
-    params.each do |key, value|
-      ATTRS_strings = ATTRS.collect {|attr| attr.to_s}
+    ATTRS_strings = ATTRS.collect {|attr| attr.to_s}
 
+    params.each do |key, value|
       self.send("#{key}=", value) if ATTRS_strings.include(key)
     end
     # name = params["name"]

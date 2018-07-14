@@ -9,10 +9,10 @@ class Pirate
   end
 
   def initialize(params)
-    # initialize pirates using only the
+    # select the relevant params
+    pirate_params = # i think the matching isn't working...
     params.each do |key, value|
       self.send("#{key}=", value) if ATTRS.include(key)
-
     end
     # name = params["name"]
     # weight = params["weight"]

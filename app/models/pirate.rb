@@ -12,6 +12,8 @@ class Pirate
     # select the relevant params
     pirate_params = # i think the matching isn't working...
     params.each do |key, value|
+      ATTRS_strings = ATTRS.collect {|attr| attr.to_s}
+
       self.send("#{key}=", value) if ATTRS.include(key)
     end
     # name = params["name"]

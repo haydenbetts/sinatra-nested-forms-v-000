@@ -13,7 +13,7 @@ class Pirate
     attrs_strings = ATTRS.collect {|attr| attr.to_s}
 
     params.each do |key, value|
-      self.send("#{key}=", value) if attrs_strings.include(key)
+      self.send("#{key}=", value) if attrs_strings.include?(key)
     end
     # name = params["name"]
     # weight = params["weight"]
